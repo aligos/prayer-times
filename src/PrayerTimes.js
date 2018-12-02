@@ -22,7 +22,9 @@ const PrayerTimes = app => {
         .then(res => {
           let $ = cheerio.load(res.data);
           let times = $("table.prayer-times>tbody>tr#today>td");
+          let degree = $("ul.qibla-direction>li>p.degree");
           let json = {
+            qibla: degree.text(),
             day: times.eq(0).text(),
             Fajr: times.eq(1).text(),
             Sunrise: times.eq(2).text(),

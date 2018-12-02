@@ -32,7 +32,9 @@ var PrayerTimes = function PrayerTimes(app) {
         var $ = _cheerio.default.load(res.data);
 
         var times = $("table.prayer-times>tbody>tr#today>td");
+        var degree = $("ul.qibla-direction>li>p.degree");
         var json = {
+          qibla: degree.text(),
           day: times.eq(0).text(),
           Fajr: times.eq(1).text(),
           Sunrise: times.eq(2).text(),
