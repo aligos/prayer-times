@@ -1,0 +1,28 @@
+{
+  "name": "prayer-times",
+  "version": "1.0.0",
+  "description": "a prayer time scraper",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/server.js"
+  },
+  "repository": "https://github.com/aligos/prayer-times.git",
+  "author": "Rahmat Aligos <rahmat.aligos@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "nodemon": "^1.18.3"
+  }
+}
