@@ -4,9 +4,9 @@
   "description": "a prayer time scraper",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/server.js",
+    "dev": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/server.js"
+    "start": "node dist/server.js"
   },
   "repository": "https://github.com/aligos/prayer-times.git",
   "author": "Rahmat Aligos <rahmat.aligos@yahoo.com>",

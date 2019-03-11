@@ -16,8 +16,7 @@ var app = (0, _express.default)();
 app.server = _http.default.createServer(app);
 app.use((0, _cors.default)());
 app.use(_bodyParser.default.json({
-  limit: "1024kb"
+  limit: '1024kb'
 }));
 (0, _PrayerTimes.default)(app);
-app.server.listen(process.env.PORT || 3000);
-console.log("PrayerTimes::: ".concat(app.server.address().port));
+app.server.listen(process.env.PORT || 5000); // console.log(`PrayerTimes::: ${app.server.address().port}`);
