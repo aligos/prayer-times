@@ -7,7 +7,7 @@ const API = "https://www.muslimpro.com/";
 const data = {
   country_code: "ID",
   country_name: "Indonesia",
-  city_name: undefined
+  city_name: "undefined"
 };
 
 const PrayerTimes = app => {
@@ -40,10 +40,13 @@ const PrayerTimes = app => {
         });
     });
   };
-  app.get("/:coordinates", (req, res) => {
+  app.get("/api/:coordinates", (req, res) => {
     loadTimes(req).then(data => {
       res.json(data);
     });
+  });
+  app.get("/", (req, res) => {
+    res.send("Alhamdulillah");
   });
 };
 

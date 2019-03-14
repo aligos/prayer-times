@@ -18,7 +18,7 @@ var API = "https://www.muslimpro.com/";
 var data = {
   country_code: "ID",
   country_name: "Indonesia",
-  city_name: undefined
+  city_name: "undefined"
 };
 
 var PrayerTimes = function PrayerTimes(app) {
@@ -53,10 +53,13 @@ var PrayerTimes = function PrayerTimes(app) {
     });
   };
 
-  app.get("/:coordinates", function (req, res) {
+  app.get("/api/:coordinates", function (req, res) {
     loadTimes(req).then(function (data) {
       res.json(data);
     });
+  });
+  app.get("/", function (req, res) {
+    res.send("Alhamdulillah");
   });
 };
 
